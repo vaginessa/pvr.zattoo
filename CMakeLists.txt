@@ -11,6 +11,7 @@ find_package(kodiplatform REQUIRED)
 find_package(p8-platform REQUIRED)
 find_package(Yajl REQUIRED)
 find_package(CURL REQUIRED)
+find_package(GnuTls REQUIRED)
 
 include_directories(${kodiplatform_INCLUDE_DIRS}
                     ${p8-platform_INCLUDE_DIRS}
@@ -21,6 +22,8 @@ include_directories(${kodiplatform_INCLUDE_DIRS}
 set(DEPLIBS ${kodiplatform_LIBRARIES} 
             ${p8-platform_LIBRARIES}
             ${YAJL_LIBRARIES}
+            ${CURL_LIBRARIES}
+            ${GNUTLS_LIBRARIES}
 )
 
 set(ZATTOO_SOURCES
